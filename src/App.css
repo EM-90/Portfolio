@@ -8,21 +8,74 @@
   margin: 0 auto;
 }
 
-.headers {
-  font-family: "Architects Daughter", cursive;
+.intro-header {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+p,
+.content-text {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-
-.myBg {
-  background-color: #F9F4E4;
+h3,
+.section-header {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
+.intro-text {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.myBg {
+  background-color: #f9f4e4;
+}
 
+.header-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
 
+.header-wave svg {
+  display: block;
+  width: calc(153% + 1.3px);
+  height: 700px;
+  z-index: 1;
+}
 
+.header-wave .shape-fill {
+  fill: #f9f4e4;
+}
 
+@media (max-width: 1024px) {
+  .header-wave svg {
+    display: block;
+    width: calc(153% + 1.3px);
+    height: 400px;
+    z-index: 1;
+  }
+}
 
-
+@media (max-width: 600px) {
+  .header-wave svg {
+    display: block;
+    width: calc(153% + 1.3px);
+    height: 300px;
+    z-index: 1;
+  }
+}
