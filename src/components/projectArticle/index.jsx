@@ -6,7 +6,7 @@ import ProjectDescription from "../projectDescription";
 
 function ProjectArticle({ image }) {
   return (
-    <div className="flex items-start flex-wrap lg:flex-nowrap my-8">
+    <div className="flex items-start flex-wrap lg:flex-nowrap my-20">
       <img className="object-contain w-full md:w-1/2" src={image} alt="" />
       <div className="textAndBtnContainer flex flex-col justify-between">
         <ProjectDescription

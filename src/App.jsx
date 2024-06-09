@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./App.css";
 import ProjectArticle from "./components/projectArticle";
 import holidaze from "./assets/screenshot-Holidaze.png";
@@ -9,17 +9,32 @@ import IntroHeaderSection from "./components/introHeaderSection";
 import AboutSection from "./components/aboutSection";
 
 function App() {
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+  const aboutRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    console.log(ref); // Debugging log
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error("Ref is not attached to any element");
+    }
+  };
+
   return (
     <main className="flex flex-col">
-      <Layout>
+      <Layout
+        scrollToProjects={() => scrollToSection(projectsRef)}
+        scrollToContact={() => scrollToSection(contactRef)}
+        scrollToAbout={() => scrollToSection(aboutRef)}
+      >
         <IntroHeaderSection />
-        <section className=" relative mt-64">
+        <section ref={aboutRef} className="relative h-dvh">
           <AboutSection />
         </section>
-        <section className="projectSection relative mt-60">
-          <h1 className="section-header text-6xl mb-16 text-headerText">
-            Projects
-          </h1>
+        <section ref={projectsRef} className="projectSection relative">
+          <h1 className="section-header text-6xl text-headerText">Projects</h1>
           <ProjectArticle image={holidaze} />
           <ProjectArticle image={auctionHouse} />
           <ProjectArticle image={trendSetter} />
