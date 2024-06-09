@@ -4,20 +4,23 @@ import PrimaryButton from "../buttons/primaryButton";
 import SecondaryButton from "../buttons/secondaryButton";
 import ProjectDescription from "../projectDescription";
 
-function ProjectArticle({ image }) {
+function ProjectArticle({ image, header, text, icon, repoLink, liveLink }) {
   return (
     <div className="flex items-start flex-wrap lg:flex-nowrap my-20">
       <img className="object-contain w-full md:w-1/2" src={image} alt="" />
       <div className="textAndBtnContainer flex flex-col justify-between">
-        <ProjectDescription
-          header={"Holidaze"}
-          text={
-            "This project is my exam where I have attempted to learn and apply TypeScript and Tailwind CSS. Holidaze is a travel booking site where users can book venues for their stay. If the user registers to become a venue manager they can additionally rent out their venues."
-          }
-        />
+        <ProjectDescription header={header} text={text} icon={icon} />
         <section className="flex flex-col sm:flex-row gap-2">
-          <PrimaryButton icon={<FaGithub />} text={"Repository"} />
-          <SecondaryButton icon={<FaGlobe />} text={"Live page"} />
+          <PrimaryButton
+            link={repoLink}
+            icon={<FaGithub />}
+            text={"Repository"}
+          />
+          <SecondaryButton
+            link={liveLink}
+            icon={<FaGlobe />}
+            text={"Live page"}
+          />
         </section>
       </div>
     </div>
