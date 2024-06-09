@@ -29,7 +29,7 @@ function App() {
         scrollToProjects={() => scrollToSection(projectsRef)}
         scrollToAbout={() => scrollToSection(aboutRef)}
       >
-        <section className="paddingContainer px-7">
+        <section className="paddingContainer px-4 sm:px-7">
           <IntroHeaderSection />
           <section ref={aboutRef} className="relative">
             <AboutSection />
@@ -42,7 +42,7 @@ function App() {
             <ProjectArticle
               header={"Holidaze"}
               text={
-                "This project is my exam where I have used TypeScript and Tailwind CSS. Holidaze is a travel booking site where users can book venues for their stay. If the user registers to become a venue manager they can rent out their venues."
+                "This project is my exam. I have used TypeScript and Tailwind CSS. Holidaze is a travel booking site where users can book venues for their stay. If the user registers to become a venue manager, they can rent out venues."
               }
               repoLink={"https://github.com/EM-90/exam-project-2"}
               liveLink={"https://splendorous-yeot-c90369.netlify.app/"}
@@ -51,7 +51,7 @@ function App() {
             <ProjectArticle
               header={"The Auction House"}
               text={
-                "This is an auction page where the user can create an account to start bidding on items. Registered users can also put their items out for auction"
+                "This is an auction page. The user can create an account to start bidding on items. Registered users can also put their items up for auction"
               }
               repoLink={
                 "https://github.com/EM-90/Semester-Project-2-AuctionHouse"
@@ -62,7 +62,7 @@ function App() {
             <ProjectArticle
               header={"TrendSetter"}
               text={
-                "TrendSetter is a page showing the users populare items that are trending. This is an e-commerce site. The main functionality is the shoping cart"
+                "TrendSetter is a page with popular items that are trending. This is an e-commerce site. The main functionality is the shopping cart"
               }
               repoLink={"https://github.com/EM-90/trend-setter"}
               liveLink={"https://incandescent-flan-2c1cc1.netlify.app/"}

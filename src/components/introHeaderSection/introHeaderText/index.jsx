@@ -9,7 +9,7 @@ function IntroHeaderText() {
         <span className=" text-teal-700"> user experience</span>?
       </h1>
       <h3 className="intro-text text-xl md:text-3xl">
-        Look no further! I am a problem solver who loves to take on a chalange
+        Look no further! I am a problem solver who loves to take on a challange
       </h3>
     </article>
   );
